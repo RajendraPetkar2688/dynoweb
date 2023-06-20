@@ -16,7 +16,7 @@
 
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-
+	
 	<nav id="header" class="fixed w-full z-10 top-0">
 
 		<div id="progress" class="h-1 z-20 top-0"
@@ -24,10 +24,12 @@
 
 		<div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
 
-			<div class="pl-4">
+			<div class="pl-4" >			
 				<a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
-					Minimal Blog
+					Minimal Blog 
+					
 				</a>
+			    
 			</div>
 
 			<div class="block lg:hidden pr-4">
@@ -109,28 +111,32 @@
 					        <p class="text-gray-600 text-xs md:text-base">{{.Content}} <a
 							class="text-green-500 no-underline hover:underline"
 							href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+							<img src={{.Image}} alt="Blog1 Image"/>
+							
+
 				        </div>
 				        <div class="justify-end">
-					        <a href="Blog.html" target="_blank">
+					        <a href={{.URI}} target="_blank">
 					        <button id="read-more" 
 						class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read
 						More</button>
 					        </a>
 				        </div>
                     {{else}}
-        <br>
+        
                         <div class="flex-1 px-2">
 					        <p class="text-base font-bold text-base md:text-xl leading-none mb-2">{{.Title}}</p>
 					        <p class="text-gray-600 text-xs md:text-base" style="color: black; font-size: 13px;">{{.PublishedAt}}</p>
 					        <p class="text-gray-600 text-xs md:text-base">{{.Content}} <a
 							class="text-green-500 no-underline hover:underline"
 							href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+							<img src={{.Image}}/>
 				        </div>
 				        <div class="justify-end">
-					        <a href="Blog.html" target="_blank">
+					        <a href={{.URI}} target="_blank">
 					        <button id="read-more" 
 						class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read
-						More</button>
+						More </button>
 					        </a>
 				        </div>
                     {{end}}
@@ -174,6 +180,7 @@
 					<p class="text-gray-600 text-xs md:text-base">Minimal Blog Tailwind CSS template by <a
 							class="text-green-500 no-underline hover:underline"
 							href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+					
 				</div>
 				<div class="justify-end">
 					<a href="Blog.html" target="_blank">

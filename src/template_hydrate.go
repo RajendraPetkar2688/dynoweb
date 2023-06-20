@@ -9,7 +9,7 @@ func HydrateTemplate(tpl *template.Template) error {
 	if err != nil {
 		return err
 	}
-	if err := tpl.ExecuteTemplate(op, "index.html", blog_data); err != nil {
+	if err := tpl.ExecuteTemplate(op, "index1.html", blog_data); err != nil {
 		return err
 	}
 
