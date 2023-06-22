@@ -1,32 +1,25 @@
 package src
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type Data struct {
-	PageTitle   string
-	HeaderTitle string
-	HeaderLinks []HeaderLink
-	ServiceData []ServiceData
-	BlogData    []BlogData
+	ID          primitive.ObjectID `json:"id,omitempty" bson:"_id,omitempty"`
+	PageTitle   string             `json:"pageTitle" bson:"pageTitle"`
+	HeaderTitle string             `json:"headerTitle" bson:"headerTitle"`
+	HeaderLinks []HeaderLink       `json:"headerLinks" bson:"headerLinks"`
+	ServiceData []ServiceData      `json:"serviceData" bson:"serviceData"`
 }
 
 type HeaderLink struct {
-	Title    string
-	URL      string
-	IsActive bool
-}
-
-type BlogData struct {
-	Title       string
-	PublishedAt string
-	Content     string
-	URI         string
-	Image       string
-	IsActive    bool
+	Title    string `json:"title" bson:"title"`
+	URL      string `json:"url" bson:"url"`
+	IsActive bool   `json:"isActive" bson:"isActive"`
 }
 
 type ServiceData struct {
-	STitle    string
-	SContent  string
-	SURI      string
-	SImage    string
-	SIsActive bool
+	Title    string `json:"title" bson:"title"`
+	Content  string `json:"content" bson:"content"`
+	URI      string `json:"uri" bson:"uri"`
+	Image    string `json:"image" bson:"image"`
+	IsActive bool   `json:"isActive" bson:"isActive"`
 }
