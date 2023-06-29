@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{.PageTitle}}</title>
+  <title>PageTitle</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
     <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
       <h1 class="text-3xl font-medium font-heading">
         <div class="flex items-center gap-2">
-        <img class="w-8" src={{.WebsiteLogo}} alt="" />
-        <a href="#hero">  {{.HeaderTitle}}</a>
+        <img class="w-8" src="./img/logo_physio.png" alt="" />
+        <a href="#hero">  HeaderTitless</a>
         </div>
       </h1>
       <div>
@@ -74,7 +74,7 @@
         </button>
       </article>
       <!-- Image for home page  -->
-      <img class="w-1/2" src={{.HomePageImage}} alt="Home Page Image" />
+      <img class="w-1/2" src="./img/home_physio.png" alt="Home Page Image" />
     </section>
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
@@ -84,34 +84,69 @@
         Our Services
       </h2>
       <ul class=" mx-auto my-8 flex gap-4 flex-wrap p-3 sm:p-0  justify-between">
-        {{range .ServiceData}}
-            {{if .IsActive}}
-              <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
-                <!-- Item content here -->
-                <img src={{.Image}} alt="Service3" class="mb-6 w-1/2" />
-                <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
-                  {{.Title}}
-                </h3>
-                <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
-                </p>
-                  
-              </li>
-           {{else}}
-              <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
-                <!-- Item content here -->
-                <img src={{.Image}} alt="Service3" class="mb-6 w-1/2" />
-                <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
-                  {{.Title}}
-                </h3>
-                <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
-                </p>
-                  
-              </li>
-            {{end}}
-        {{end}}
-              
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service1.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 1
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+            
+        </li>
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service2.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 2
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+            
+        </li>
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service3.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 3
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+        </li>
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service1.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 4
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+        </li>
+        <!-- Add more list items here -->
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service3.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 5
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+        </li>
+        <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+          <!-- Item content here -->
+          <img src="./img/Service3.jpg" alt="Service3" class="mb-6 w-1/2" />
+          <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+            Service 6
+          </h3>
+          <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+            More info
+          </p>
+        </li>
       </ul>
     </section>
 
@@ -122,44 +157,56 @@
       <h2 class="mb-6 text-center  font-heading text-3xl font-bold text-slate-900 dark:text-white sm:text-3xl">
         Blogs
       </h2>
-        {{range .BlogData}}
-          {{if .IsActive}}
-            <figure class="my-8">
-              <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
-                <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
-                </h2>
-                <p class=" text-left text-base  text-white ">
-                  {{.Published}} 
-                </p>
-                <p class=" text-left text-xl text-white ">
-                  {{.Content}}
-                </p>
-              </blockquote>
-              <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
-              </figcaption>
-            </figure>
-          {{else}}
-            <figure class="my-8">
-              <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
-                <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
-                </h2>
-                <p class=" text-left text-base  text-white ">
-                  {{.Published}}
-                </p>
-                <p class=" text-left text-xl text-white ">
-                  {{.Content}}
-                </p>
-              </blockquote>
-              <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
-              </figcaption>
-            </figure>
-          {{end}}
-        {{end}}
-            
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 1 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 1
+        </figcaption>
+      </figure>
+      
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 2 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 2
+        </figcaption>
+      </figure>
+      
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 3 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 3
+        </figcaption>
+      </figure>
       
     </section>
 

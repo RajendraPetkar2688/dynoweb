@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{.PageTitle}}</title>
+  <title>Demo web page</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +21,13 @@
     <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
       <h1 class="text-3xl font-medium font-heading">
         <div class="flex items-center gap-2">
-        <img class="w-8" src={{.WebsiteLogo}} alt="" />
-        <a href="#hero">  {{.HeaderTitle}}</a>
+        <img class="w-8" src=./img/logo_physio.png alt="" />
+        <a href="#hero">  Demo web page</a>
         </div>
       </h1>
       <div>
         <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-          <!-- &#9776; -->
+          
           <div
             class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
           </div>
@@ -41,15 +41,13 @@
     </section>
     <section id="mobile-menu"
       class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-3xl">
-      <!-- <button class="text-8xl self-end px-6">
-                &times;
-            </button> -->
+      
       <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
         <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
         <a href="#services" class="w-full py-6 text-center hover:opacity-90">Our Services</a>
         <a href="#blogs" class="w-full py-6 text-center hover:opacity-90">Blogs</a>
         <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
-        <!-- <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a> -->
+        
       </nav>
     </section>
   </header>
@@ -59,22 +57,20 @@
       <article class="sm:w-1/2">
         <h2 class="max-w-md text-center font-heading text-base font-bold text-slate-900 dark:text-white sm:text-left sm:text-3xl">
           Home Page Title
-          <!-- <span class="text-indigo-700 dark:text-indigo-300">Where No Rocket</span> -->
+          
         </h2>
         <p class="mt-4 max-w-md text-center text-xl text-slate-700 dark:text-slate-400 sm:text-left">
           Physical therapists provide services that develop, maintain and restore people’s maximum movement and functional ability. They can help people at any stage of life, when movement and function are threatened by ageing, injury, diseases, disorders, conditions or environmental factors.
         </p>
-        <!-- <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
-          Message for home page para 2
-        </p> -->
+        
         <br>
         <button
           class="w-48 rounded-xl font-heading border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none ">
           Book Appoinments
         </button>
       </article>
-      <!-- Image for home page  -->
-      <img class="w-1/2" src={{.HomePageImage}} alt="Home Page Image" />
+      
+      <img class="w-1/2" src=./img/home_physio.png alt="Home Page Image" />
     </section>
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
@@ -84,33 +80,49 @@
         Our Services
       </h2>
       <ul class=" mx-auto my-8 flex gap-4 flex-wrap p-3 sm:p-0  justify-between">
-        {{range .ServiceData}}
-            {{if .IsActive}}
+        
+            
               <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
-                <!-- Item content here -->
-                <img src={{.Image}} alt="Service3" class="mb-6 w-1/2" />
+                
+                <img src=./img/Service1.jpg alt="Service3" class="mb-6 w-1/2" />
                 <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
-                  {{.Title}}
+                  Service 1
                 </h3>
                 <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
+                  Sample service content 1
                 </p>
                   
               </li>
-           {{else}}
+           
+        
+            
               <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
-                <!-- Item content here -->
-                <img src={{.Image}} alt="Service3" class="mb-6 w-1/2" />
+                
+                <img src=./img/3.jpg alt="Service3" class="mb-6 w-1/2" />
                 <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
-                  {{.Title}}
+                  Service 3
                 </h3>
                 <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
+                  Sample service content 2
                 </p>
                   
               </li>
-            {{end}}
-        {{end}}
+            
+        
+            
+              <li class="flex w-full sm:w-1/4 md:w-1/4 lg:w-1/4 xl:w-1/4  flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black">
+                
+                <img src=./img/Service1.jpg alt="Service3" class="mb-6 w-1/2" />
+                <h3 class="text-center font-bold text-xl text-slate-900 dark:text-white">
+                  Service 4
+                </h3>
+                <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
+                  Sample service content 2
+                </p>
+                  
+              </li>
+            
+        
               
       </ul>
     </section>
@@ -122,51 +134,52 @@
       <h2 class="mb-6 text-center  font-heading text-3xl font-bold text-slate-900 dark:text-white sm:text-3xl">
         Blogs
       </h2>
-        {{range .BlogData}}
-          {{if .IsActive}}
+        
+          
             <figure class="my-8">
               <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
                 <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
+                  Blog Post 1
                 </h2>
                 <p class=" text-left text-base  text-white ">
-                  {{.Published}} 
+                  2022-01-01 
                 </p>
                 <p class=" text-left text-xl text-white ">
-                  {{.Content}}
+                  Sample blog content 1
                 </p>
               </blockquote>
               <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
+                &#8212;XYZ
               </figcaption>
             </figure>
-          {{else}}
+          
+        
+          
             <figure class="my-8">
               <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
                 <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
+                  Blog Post 2
                 </h2>
                 <p class=" text-left text-base  text-white ">
-                  {{.Published}}
+                  2022-02-01 
                 </p>
                 <p class=" text-left text-xl text-white ">
-                  {{.Content}}
+                  Sample blog content 2
                 </p>
               </blockquote>
               <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
+                &#8212;PQR
               </figcaption>
             </figure>
-          {{end}}
-        {{end}}
+          
+        
             
       
     </section>
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-    <!-- <section id="hero"
-      class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"> -->
+    
 
       <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
       <h2 class="mb-6 text-center font-heading text-3xl font-bold text-slate-900 dark:text-white sm:text-3xl">

@@ -21,7 +21,7 @@
     <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
       <h1 class="text-3xl font-medium font-heading">
         <div class="flex items-center gap-2">
-        <img class="w-8" src={{.WebsiteLogo}} alt="" />
+        <img class="w-8" src="./img/logo_physio.png" alt="" />
         <a href="#hero">  {{.HeaderTitle}}</a>
         </div>
       </h1>
@@ -74,7 +74,7 @@
         </button>
       </article>
       <!-- Image for home page  -->
-      <img class="w-1/2" src={{.HomePageImage}} alt="Home Page Image" />
+      <img class="w-1/2" src="./img/home_physio.png" alt="Home Page Image" />
     </section>
 
     <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
@@ -93,7 +93,7 @@
                   {{.Title}}
                 </h3>
                 <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
+                  {{.content}}
                 </p>
                   
               </li>
@@ -105,7 +105,7 @@
                   {{.Title}}
                 </h3>
                 <p class="mt-2 hidden text-center text-base text-slate-500 dark:text-slate-400 sm:block">
-                  {{.Content}}
+                  {{.content}}
                 </p>
                   
               </li>
@@ -122,44 +122,56 @@
       <h2 class="mb-6 text-center  font-heading text-3xl font-bold text-slate-900 dark:text-white sm:text-3xl">
         Blogs
       </h2>
-        {{range .BlogData}}
-          {{if .IsActive}}
-            <figure class="my-8">
-              <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
-                <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
-                </h2>
-                <p class=" text-left text-base  text-white ">
-                  {{.Published}} 
-                </p>
-                <p class=" text-left text-xl text-white ">
-                  {{.Content}}
-                </p>
-              </blockquote>
-              <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
-              </figcaption>
-            </figure>
-          {{else}}
-            <figure class="my-8">
-              <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
-                <h2 class=" text-left  font-body text-xl font-bold  text-white ">
-                  {{.Title}}
-                </h2>
-                <p class=" text-left text-base  text-white ">
-                  {{.Published}}
-                </p>
-                <p class=" text-left text-xl text-white ">
-                  {{.Content}}
-                </p>
-              </blockquote>
-              <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
-                &#8212;{{.AuthorName}}
-              </figcaption>
-            </figure>
-          {{end}}
-        {{end}}
-            
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 1 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 1
+        </figcaption>
+      </figure>
+      
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 2 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 2
+        </figcaption>
+      </figure>
+      
+      <figure class="my-8">
+        <blockquote class="relative rounded-3xl bg-teal-600 py-6 pl-14 pr-8 dark:bg-black">
+          <h2 class=" text-left  font-body text-xl font-bold  text-white ">
+            Blog Title
+          </h2>
+          <p class=" text-left text-base  text-white ">
+            Published at 
+          </p>
+          <p class=" text-left text-xl text-white ">
+            Blog 3 data
+          </p>
+        </blockquote>
+        <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 ">
+          &#8212;Author 3
+        </figcaption>
+      </figure>
       
     </section>
 
